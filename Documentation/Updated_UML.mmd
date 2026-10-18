@@ -1,0 +1,55 @@
+classDiagram
+class Assignment {
+ +int AssignmentID
+ +string Title
+ +string Description
+ +DateTime DueDate
+ +bool IsCompleted
+ +int CourseID
+ +Assignment()
+ +MarkCompleted() void
+ +IsDueBy(DateTime deadline) bool
+}
+class Course {
+ +int CourseID
+ +string CourseName
+ +string InstructorName
+ +string Semester
+ +Course()
+}
+class AssignmentManager {
+ +List~Assignment~ Assignments
+ +List~Course~ Courses
+ +DateTime SelectedDeadline
+ +int TotalDue
+ +int Completed
+ +int Remaining
+ +AssignmentManager(List~Course~ courses)
+ +AddAssignment(Assignment assignment) bool
+ +MarkCompleted(int assignmentID) bool
+ +CalculateTotals() void
+ -IsValidAssignment(Assignment assignment) bool
+}
+class MainForm {
+ -AssignmentManager manager
+ -int nextAssignmentID
+ +MainForm()
+ -AddAssignmentButton_Click(object sender, EventArgs e) void
+ -MarkCompletedButton_Click(object sender, EventArgs e) void
+ -CalculateTotalsButton_Click(object sender, EventArgs e) void
+ -ClearFieldsButton_Click(object sender, EventArgs e) void
+ -DeadlinePicker_ValueChanged(object sender, EventArgs e) void
+ -AssignmentsGrid_SelectionChanged(object sender, EventArgs e) void
+ -ClearInputFields() void
+ -RefreshAssignments(int selectedID) void
+ -UpdateTotals() void
+ -SetStatus(string message, bool isError) void
+ ~CaptureEvidenceAsync(string folder) Task
+ -CaptureFormAsync(string folder, string name) Task
+ -CheckEvidence(bool condition, string name, List~string~ results) void
+}
+Form <|-- MainForm
+MainForm --> "1" AssignmentManager : uses
+AssignmentManager "1" o-- "0..*" Assignment : stores
+AssignmentManager "1" o-- "0..*" Course : stores
+Course "1" -- "0..*" Assignment : CourseID
