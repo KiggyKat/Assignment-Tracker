@@ -1,0 +1,11 @@
+PASS: Fresh session is empty
+PASS: Add button rejects missing title and course
+PASS: Add button creates three records
+PASS: Calculate button includes cutoff day and excludes later work
+PASS: Row selection displays description
+PASS: Completion button refreshes status, counts, and button state
+PASS: Date change event refreshes counts
+PASS: Clear button resets input and preserves existing records
+PASS: Earlier cutoff produces zero counts
+Passed: 9; Failed: 0
+Actual Windows Forms captures from the running application.
