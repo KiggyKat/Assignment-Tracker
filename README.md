@@ -1,5 +1,5 @@
 ## Submission Notes
-Due to GitHub upload difficulties, this upload has no Documentation with the screenshots or project report. This upload also does not have the attached video walk through. Those are located in the submission on Canvas.
+Due to GitHub upload difficulties, this upload does not have the attached video walk through. Those are located in the submission on Canvas.
 
 ## Run in VS Code on Windows
 
