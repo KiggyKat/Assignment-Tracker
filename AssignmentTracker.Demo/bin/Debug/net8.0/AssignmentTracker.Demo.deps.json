@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "AssignmentTracker.Demo/1.0.0": {
+        "dependencies": {
+          "AssignmentTracker.Core": "1.0.0"
+        },
+        "runtime": {
+          "AssignmentTracker.Demo.dll": {}
+        }
+      },
+      "AssignmentTracker.Core/1.0.0": {
+        "runtime": {
+          "AssignmentTracker.Core.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "AssignmentTracker.Demo/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "AssignmentTracker.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
